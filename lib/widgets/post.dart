@@ -17,27 +17,7 @@ class PostWidget extends StatelessWidget {
       children: <Widget>[
         _postHeader(),
         _postImage(size), // size를 전달
-        Row(
-          children: <Widget>[
-            IconButton(
-              onPressed: null,
-              icon: Icon(Icons.favorite_border),
-            ),
-            IconButton(
-              onPressed: null,
-              icon: Icon(Icons.mode_comment_outlined),
-            ),
-            IconButton(
-              onPressed: null,
-              icon: Icon(Icons.send),
-            ),
-            Spacer(),
-            IconButton(
-              onPressed: null,
-              icon: Icon(Icons.bookmark_border),
-            ),
-          ],
-        )
+        _postFooter()
       ],
     );
   }
@@ -84,6 +64,30 @@ class PostWidget extends StatelessWidget {
           containerSize: size.width,
         );
       },
+    );
+  }
+
+  Row _postFooter() {
+    return Row(
+      children: <Widget>[
+        IconButton(
+          onPressed: null,
+          icon: Icon(Icons.favorite_border),
+        ),
+        IconButton(
+          onPressed: null,
+          icon: Icon(Icons.mode_comment_outlined),
+        ),
+        IconButton(
+          onPressed: null,
+          icon: Icon(Icons.send),
+        ),
+        Spacer(),
+        IconButton(
+          onPressed: null,
+          icon: Icon(Icons.bookmark_border),
+        ),
+      ],
     );
   }
 }
