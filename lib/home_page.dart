@@ -52,6 +52,8 @@ class _HomePageState extends State<HomePage> {
         unselectedItemColor: Colors.grey,
         currentIndex: selectedIndex,
         onTap: _onBottomItemClick,
+        type: BottomNavigationBarType
+            .fixed, // Add this line to ensure all items have the same space
       ),
     );
   }
