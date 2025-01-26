@@ -1,4 +1,5 @@
 import 'package:clone_instagram/screens/feed_screen.dart';
+import 'package:clone_instagram/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -31,9 +32,7 @@ class _HomePageState extends State<HomePage> {
     Container(
       color: Colors.deepPurpleAccent,
     ),
-    Container(
-      color: Colors.cyanAccent,
-    ),
+    ProfileScreen(),
   ];
 
   int selectedIndex = 0;
