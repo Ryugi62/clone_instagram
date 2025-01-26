@@ -2,7 +2,6 @@ import 'package:clone_instagram/screens/feed_screen.dart';
 import 'package:clone_instagram/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class HomePage extends StatefulWidget {
   const HomePage({
     super.key,
@@ -32,7 +31,7 @@ class _HomePageState extends State<HomePage> {
     Container(
       color: Colors.deepPurpleAccent,
     ),
-    ProfileScreen(),
+    ProfileScreen(fromTab: true), // 기본적으로 하단 탭에서 이동한 것으로 간주
   ];
 
   int selectedIndex = 0;
@@ -52,8 +51,7 @@ class _HomePageState extends State<HomePage> {
         unselectedItemColor: Colors.grey,
         currentIndex: selectedIndex,
         onTap: _onBottomItemClick,
-        type: BottomNavigationBarType
-            .fixed, // Add this line to ensure all items have the same space
+        type: BottomNavigationBarType.fixed,
       ),
     );
   }
