@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:clone_instagram/constants/common_size.dart';
-import 'package:clone_instagram/widgets/avatar.dart';
+import 'package:clone_instagram/widgets/rounded_avatar.dart';
 import 'package:clone_instagram/widgets/my_progress_indicater.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +26,7 @@ class PostWidget extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(COMMON_XXS_SIZE),
-          child: AvatarWidget(),
+          child: RoundedAvatar(),
         ),
         Expanded(
           child: Text("userName"),

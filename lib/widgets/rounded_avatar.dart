@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:clone_instagram/constants/common_size.dart';
 import 'package:flutter/material.dart';
 
-class AvatarWidget extends StatelessWidget {
-  const AvatarWidget({super.key});
+class RoundedAvatar extends StatelessWidget {
+  const RoundedAvatar({super.key});
 
   @override
   Widget build(BuildContext context) {
