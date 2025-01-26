@@ -17,7 +17,7 @@ class PostWidget extends StatelessWidget {
       children: <Widget>[
         _postHeader(),
         _postImage(size), // size를 전달
-        _postFooter()
+        _postActions()
       ],
     );
   }
@@ -67,7 +67,7 @@ class PostWidget extends StatelessWidget {
     );
   }
 
-  Row _postFooter() {
+  Row _postActions() {
     return Row(
       children: <Widget>[
         IconButton(
