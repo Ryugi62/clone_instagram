@@ -14,18 +14,7 @@ class ProfileScreen extends StatelessWidget {
         children: [
           _profileAppBar(),
           _profileHeader(),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-              child: Text(
-                '저를 소개합니다.\n인스타그램 클론코딩 중입니다.',
-                style: TextStyle(
-                  fontSize: 12,
-                ),
-              ),
-            ),
-          ),
+          _profileDescription(),
           if (fromTab) _editProfileButton(),
         ],
       ),
@@ -139,6 +128,21 @@ class ProfileScreen extends StatelessWidget {
             ],
           )
         ],
+      ),
+    );
+  }
+
+  Widget _profileDescription() {
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+        child: Text(
+          '저를 소개합니다.\n인스타그램 클론코딩 중입니다.',
+          style: TextStyle(
+            fontSize: 12,
+          ),
+        ),
       ),
     );
   }
