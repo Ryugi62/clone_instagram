@@ -1,4 +1,4 @@
-import 'package:clone_instagram/feed_screen.dart';
+import 'package:clone_instagram/screens/feed_screen.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
