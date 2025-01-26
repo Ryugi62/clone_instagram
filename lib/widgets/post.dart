@@ -70,22 +70,80 @@ class PostWidget extends StatelessWidget {
   Row _postActions() {
     return Row(
       children: <Widget>[
+        _likeButtonRow(),
+        _commentButtonRow(),
         IconButton(
           onPressed: null,
-          icon: Icon(Icons.favorite_border),
-        ),
-        IconButton(
-          onPressed: null,
-          icon: Icon(Icons.mode_comment_outlined),
-        ),
-        IconButton(
-          onPressed: null,
-          icon: Icon(Icons.send),
+          icon: Icon(
+            Icons.send,
+            color: Colors.black87,
+          ),
         ),
         Spacer(),
         IconButton(
           onPressed: null,
-          icon: Icon(Icons.bookmark_border),
+          icon: Icon(
+            Icons.bookmark_border,
+            color: Colors.black87,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Row _likeButtonRow() {
+    return Row(
+      children: <Widget>[
+        SizedBox(
+          width: COMMON_XXS_SIZE,
+        ),
+        InkWell(
+          onTap: null,
+          child: Icon(
+            Icons.favorite_border,
+          ),
+        ),
+        SizedBox(
+          width: COMMON_XXS_SIZE / 2,
+        ),
+        InkWell(
+          onTap: null,
+          child: Text(
+            "2,000",
+            style: TextStyle(
+              color: Colors.black87,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Row _commentButtonRow() {
+    return Row(
+      children: <Widget>[
+        SizedBox(
+          width: COMMON_XXS_SIZE,
+        ),
+        InkWell(
+          onTap: null,
+          child: Icon(
+            Icons.mode_comment_outlined,
+          ),
+        ),
+        SizedBox(
+          width: COMMON_XXS_SIZE / 2,
+        ),
+        InkWell(
+          onTap: null,
+          child: Text(
+            "2,000",
+            style: TextStyle(
+              color: Colors.black87,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ],
     );
