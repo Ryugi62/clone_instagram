@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:clone_instagram/constants/common_size.dart';
-import 'package:clone_instagram/widgets/comment.dart';
 import 'package:clone_instagram/widgets/rounded_avatar.dart';
 import 'package:clone_instagram/widgets/my_progress_indicater.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +18,7 @@ class PostWidget extends StatelessWidget {
         _postHeader(),
         _postImage(size), // size를 전달
         _postActions(),
-        Comment(),
+        _postCaption(),
         SizedBox(
           height: 16,
         ),
@@ -152,5 +151,57 @@ class PostWidget extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  Widget _postCaption() {
+    return Align(
+        alignment: Alignment.centerLeft,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 12,
+            vertical: 0,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start, // Add this line
+            children: [
+              RichText(
+                textAlign: TextAlign.left,
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: "userName",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                      ),
+                    ),
+                    TextSpan(
+                      text: " ",
+                    ),
+                    TextSpan(
+                      // 엄청 긴 텍스트
+                      text: "As the title suggests, I am trying to ",
+                      style: TextStyle(
+                        color: Colors.black87,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 4,
+              ),
+              // time stamp, 좌측 정렬
+              Text(
+                "5일 전",
+                style: TextStyle(
+                  color: Colors.grey[600],
+                  fontSize: 10,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ],
+          ),
+        ));
   }
 }
